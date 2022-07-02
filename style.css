@@ -60,6 +60,20 @@ body {
 .col-12 {
   flex: 0 0 100%;
 }
+@media (max-width:600) {
+  .col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+}
 .container {
   max-width: 1000px;
  margin: 0 auto;
@@ -134,6 +148,9 @@ body {
 .dropdown ul a:hover {
   background-color: white;
   color: #5e5a5a;
+}
+ul li a {
+  color: black;
 }
 .hero {
     min-height: 75vh;
@@ -252,13 +269,13 @@ body {
 }
 .card1 {
   background-color: lightblue;
-  width: 350px;
+  width: 360px;
   height: 270px;
   text-align: center;
 }
 .card2 {
   background-color: rgb(81, 172, 202);
-  width: 350px;
+  width: 360px;
   height: 270px;
   text-align: center;
   position: relative;
@@ -267,7 +284,7 @@ body {
 }
 .card3 {
   background-color: lightblue;
-  width: 350px;
+  width: 360px;
   height: 270px;
   text-align: center;
 }
@@ -319,9 +336,6 @@ body {
   font-weight: 400;
   text-decoration: underline white;
 }
-.hero-8 i {
-  margin: 10px;
-}
 header {
   background-image: url(./images/office-865091_960_720.webp);
  background-repeat: no-repeat;
@@ -330,8 +344,59 @@ header {
  font-family: 'Outfit', sans-serif;
  font-size: 25px;
  font-weight: 900;
-}
-.burger {
+} 
+.menu-burger {
+  display: inline-block;
   position: relative;
-  height: 23px;
+  width: 30px;
+  height: 20px;
+  }
+  .menu-burger::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+  } 
+  .menu-burger::after {
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+  }
+  .menu-burger::before {
+    top: 0;
+  }
+  .menu-burger::after {
+    bottom: 0;
+  }
+  .menu-burger span {
+    position: absolute;
+    background-color: black;
+  
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 9px;
+    height: 2px;
+  }
+@media (min-width:923px) {
+  .menu-burger {
+    display: block;
+  }
+  .menu-burger {
+    display: none;
+  }
 }
+@media (max-width:923px) {
+  .dropdown {
+    display: block;
+  }
+  .dropdown {
+    display: none;
+  }
+}  
+
+  
